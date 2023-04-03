@@ -13,6 +13,8 @@ phases:
       - echo $AWS_MODULE_SOURCE
       - AWS_MODULE_GIT_REF=$(aws ssm get-parameter --name $SSM_AWS_MODULE_GIT_REF --query "Parameter.Value" --output text)
       - echo $AWS_MODULE_GIT_REF
+      - AWS_MODULE_GIT_REF=$(aws ssm get-parameter --name $SSM_AWS_MODULE_GIT_REF --query "Parameter.Value" --output text)
+
       # URL Without Access ID
       - URL=$(echo "$AWS_MODULE_SOURCE" | awk '{split($0,a,"@"); print a[2]}')
       - |
