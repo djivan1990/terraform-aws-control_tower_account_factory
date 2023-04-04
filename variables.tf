@@ -47,7 +47,7 @@ variable "aft_framework_repo_url" {
 
 variable "aft_framework_repo_git_ref" {
   description = "Git branch from which the AFT framework should be sourced from"
-  default     = 1.0.0
+  default     = "1.0.0"
   type        = string
 }
 
@@ -163,8 +163,8 @@ variable "aft_feature_delete_default_vpcs_enabled" {
 variable "vcs_provider" {
   description = "Customer VCS Provider - valid inputs are codecommit, github, or githubenterprise"
   type        = string
-  #default     = "codecommit"
-  default = "github"
+  default     = "codecommit"
+  #default = "github"
   validation {
     condition     = contains(["codecommit", "github", "githubenterprise"], var.vcs_provider)
     error_message = "Valid values for var: vcs_provider are (codecommit, github, githubenterprise)."
@@ -180,7 +180,7 @@ variable "github_enterprise_url" {
 variable "account_request_repo_name" {
   description = "Repository name for the account request files. For non-CodeCommit repos, name should be in the format of Org/Repo"
   type        = string
-  default     = "djivan1990/aft-account-request"
+  default     = "aft-account-request"
   validation {
     condition     = length(var.account_request_repo_name) > 0
     error_message = "Variable var: account_request_repo_name cannot be empty."
@@ -200,7 +200,7 @@ variable "account_request_repo_branch" {
 variable "global_customizations_repo_name" {
   description = "Repository name for the global customization files. For non-CodeCommit repos, name should be in the format of Org/Repo"
   type        = string
-  default     = "djivan1990/aft-global-customizations"
+  default     = "aft-global-customizations"
   validation {
     condition     = length(var.global_customizations_repo_name) > 0
     error_message = "Variable var: global_customizations_repo_name cannot be empty."
@@ -220,7 +220,7 @@ variable "global_customizations_repo_branch" {
 variable "account_customizations_repo_name" {
   description = "Repository name for the account customizations files. For non-CodeCommit repos, name should be in the format of Org/Repo"
   type        = string
-  default     = "djivan1990/aft-account-customizations"
+  default     = "aft-account-customizations"
   validation {
     condition     = length(var.account_customizations_repo_name) > 0
     error_message = "Variable var: account_customizations_repo_name cannot be empty."
@@ -240,7 +240,7 @@ variable "account_customizations_repo_branch" {
 variable "account_provisioning_customizations_repo_name" {
   description = "Repository name for the account provisioning customizations files. For non-CodeCommit repos, name should be in the format of Org/Repo"
   type        = string
-  default     = "djivan1990/aft-account-provisioning-customizations"
+  default     = "aft-account-provisioning-customizations"
   validation {
     condition     = length(var.account_provisioning_customizations_repo_name) > 0
     error_message = "Variable var: account_provisioning_customizations_repo_name cannot be empty."
