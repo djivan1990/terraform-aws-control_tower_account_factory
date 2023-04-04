@@ -6,4 +6,5 @@ resource "aws_ssm_parameter" "example_parameter_dev" {
   name  = "/aft/example/parameter_dev"
   type  = "String"
   value = "developer customizations"
+  overwrite = true
 }
