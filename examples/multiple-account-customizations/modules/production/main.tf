@@ -5,4 +5,5 @@ resource "aws_ssm_parameter" "example_parameter_prod" {
   name  = "/aft/example/parameter_prod"
   type  = "String"
   value = "Production customizations"
+  overwrite = true
 }

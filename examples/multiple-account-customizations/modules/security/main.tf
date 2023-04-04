@@ -5,4 +5,5 @@ resource "aws_ssm_parameter" "example_parameter_security" {
   name  = "/aft/example/parameter_security"
   type  = "String"
   value = "Security customizations"
+  overwrite = true
 }
