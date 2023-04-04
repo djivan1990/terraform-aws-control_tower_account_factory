@@ -16,10 +16,10 @@ authors = [
     {name = "AWS"}
 ]
 version = "0.2.0"
-requires-python = ">=3.8"
+requires-python = ">=3.9"
 description="Common framework for AWS Control Tower Account Factory for Terraform"
 classifiers=[
-    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
     "License :: OSI Approved :: MIT License",
     "Operating System :: OS Independent",
 ]
